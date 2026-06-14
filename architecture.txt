@@ -1,0 +1,67 @@
+                RAW DATA LAYER
+┌────────────────────────────────────┐
+│  Cricsheet JSON Match Files        │
+│  (Ball-by-ball cricket data)       │
+└────────────────────────────────────┘
+                    │
+                    ▼
+            🐍 PYTHON ENGINEERING LAYER
+┌────────────────────────────────────┐
+│ 1. JSON Parsing                    │
+│    - Read match files              │
+│    - Extract deliveries            │
+│                                    │
+│ 2. Domain Filtering                │
+│    - Keep ONLY Indian players      │
+│                                    │
+│ 3. Feature Engineering             │
+│    - runs                          │
+│    - is_boundary                   │
+│    - is_dot                        │
+│                                    │
+│ 4. Aggregations                    │
+│    - Match-level stats             │
+│    - Yearly player stats           │
+│                                    │
+│ 5. Advanced Metrics                │
+│    - strike_rate                   │
+│    - boundary_percent              │
+│    - dot_ball_percent              │
+│    - consistency_index             │
+│                                    │
+│ 6. Data Cleaning                   │
+│    - Remove low sample players     │
+│    - Handle NaN/inf values         │
+│                                    │
+│ 7. Scouting Intelligence           │
+│    - scouting_score                │
+│    - player_role classification    │
+└────────────────────────────────────┘
+                    │
+                    ▼
+            📁 ANALYTICS DATASET
+┌────────────────────────────────────┐
+│ indian_player_scouting.csv         │
+│                                    │
+│ year | batter | metrics | score    │
+└────────────────────────────────────┘
+                    │
+                    ▼
+          🗄️ SQL MODELING LAYER (Next)
+┌────────────────────────────────────┐
+│ MySQL Database                     │
+│ - Create scouting table            │
+│ - Load CSV                         │
+│ - Analytical queries               │
+└────────────────────────────────────┘
+                    │
+                    ▼
+          📊 POWER BI DASHBOARD (Future)
+┌────────────────────────────────────┐
+│ Scouting Intelligence Dashboard    │
+│                                    │
+│ - Top Emerging Players             │
+│ - Aggressive vs Anchor Players     │
+│ - Yearly Performance Trends        │
+│ - Strength vs Weakness Analysis    │
+└────────────────────────────────────┘
